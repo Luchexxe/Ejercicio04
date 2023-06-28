@@ -155,23 +155,10 @@ function eje2(empresas)
 
   }
 
-  
-  class ResultadoTotal{
-    res
-    constructor()
-    {
-      this.res=[];
-    }
-    newRes(p)
-    {
-      this.res.push(p)
-    }
-     
-    
-  }
+ 
 
 
-var _ResultadoTotal=new ResultadoTotal();
+var _ResultadoTotal=[];
   empresas.forEach((value)=>
   {
     var _empresa= [];
@@ -194,13 +181,13 @@ var _ResultadoTotal=new ResultadoTotal();
     _empresa.seccionesSinLocal=_arraySecciones;
     
    
-    _ResultadoTotal.newRes(_empresa);
+    _ResultadoTotal.push(_empresa);
   
   }
   
   
   );
-
+ 
   console.log(_ResultadoTotal);
 }
 
